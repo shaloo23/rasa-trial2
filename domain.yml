@@ -1,0 +1,62 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- bye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- cc_number:
+    use_entities: true
+- acc_balance:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- thank you:
+    use_entities: true
+entities: []
+slots:
+  access_level:
+    type: rasa.shared.core.slots.CategoricalSlot
+    initial_value: access level 2
+    auto_fill: true
+    influence_conversation: true
+    values:
+    - access level 1
+    - access level 2
+    - access level 3
+  cc_number:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: 13075678221
+    auto_fill: true
+    influence_conversation: false
+  acc_balance:
+    type: rasa.shared.core.slots.AnySlot
+    initial_value: Rs.65798
+    auto_fill: true
+    influence_conversation: false
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_did_that_help:
+  - text: Did that help?
+  utter_bye:
+  - text: Bye
+  utter_welcome:
+  - text: You are welcome
+  utter_no_info:
+  - text: Sorry, i donot have the information you are looking for
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_cc_number
+- action_acc_balance
+forms: {}
+e2e_actions: []

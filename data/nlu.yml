@@ -1,0 +1,82 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: bye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: thank you
+  examples: |
+    - thanks
+    - Thank you
+    - Thanks a lot
+    - Thank you so much
+    - That was of great help!
+    - Thank you for helping me out
+
+- intent: cc_number
+  examples: |
+    - Whats my cc number
+    - what is my credit card number
+    - i need to know my cc number
+    - i want to know my credit card number
+
+- intent: acc_balance
+  examples: |
+    - Whats my balance
+    - whats the acc balacne
+    - What is my account balance
+    - i need to know my acc balance
+    - i want to know the account balance
+    
